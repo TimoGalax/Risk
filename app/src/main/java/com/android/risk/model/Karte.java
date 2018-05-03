@@ -45,6 +45,7 @@ class Karte {
         }
 
         //TODO Werte konkretisieren; Methode ausbauen
+        return null;
     }
 
 }
