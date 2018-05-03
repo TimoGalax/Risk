@@ -1,19 +1,33 @@
 package com.android.risk.model;
 
+/**
+ *
+ * @author Thomas
+ */
 class Karte {
     private Kontinent kontinente[];
 
     Karte() {
         kontinente = new Kontinent[6]; //TODO Werte
         kontinente[0] = new Kontinent("Nordamerika");
-        kontinente[0] = new Kontinent("Südamerika");
-        kontinente[0] = new Kontinent("Europa");
-        kontinente[0] = new Kontinent("Afrika");
-        kontinente[0] = new Kontinent("Asien");
-        kontinente[0] = new Kontinent("Australien");
+        kontinente[1] = new Kontinent("Südamerika");
+        kontinente[2] = new Kontinent("Europa");
+        kontinente[3] = new Kontinent("Afrika");
+        kontinente[4] = new Kontinent("Asien");
+        kontinente[5] = new Kontinent("Australien");
     }
 
+    /**
+     * Die Methode gibt an, ob zwei Regionen des selben Besetzers verbunden sind.
+     * Als Verbunden gelten zwei Regionen, wenn es einen Pfad (def. Graphen) gibt,
+     * der nur über Regeionen führt,
+     *
+     * @param von  Die Regionenkennziffer der ersten Region.
+     * @param nach Die Regionenkennziffer der zweiten Region.
+     * @return Gibt an, ob eine Verbindung mit den oben genannten vorraussetzungen besteht.
+     */
     boolean verbunden(int von, int nach) {
+        //TODO
         return false;
     }
 
@@ -31,6 +45,7 @@ class Karte {
         }
 
         //TODO Werte konkretisieren; Methode ausbauen
+        return null;
     }
 
 }

@@ -1,5 +1,9 @@
 package com.android.risk.model;
 
+/**
+ *
+ * @author Thomas
+ */
 public class Spiel {
     private Karte karte;
     private Spieler spieler[];
@@ -29,7 +33,6 @@ public class Spiel {
         if (phase!=0) {
             //TODO Exception
         }
-        karte.
 
     }
 
