@@ -2,6 +2,10 @@ package com.android.risk.model;
 
 import java.util.ArrayList;
 
+/**
+ *
+ * @author Thomas
+ */
 public class Spieler {
     private final Farbe farbe;
     private final Spiel spiel;
