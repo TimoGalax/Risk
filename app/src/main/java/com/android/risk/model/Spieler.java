@@ -14,9 +14,8 @@ public class Spieler {
     private ArrayList<Integer> besetzteRegionen = new ArrayList<>();
     private boolean amZug = false;
 
-    Spieler(Farbe farbe, Spiel spiel) {
+    Spieler(Farbe farbe) {
         this.farbe = farbe;
-        this.spiel = spiel;
     }
 
     void ungesetzteTruppenHinzufuegen(int anzahl) {

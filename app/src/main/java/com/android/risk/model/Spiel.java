@@ -16,9 +16,6 @@ public class Spiel {
         }
 
         spieler = new Spieler[anzahlSpieler];
-        for (int i=0;i<anzahlSpieler;++i) {
-            spieler[i] = new Spieler(new Farbe(i),this); //TODO Farbauswahl
-        }
     }
 
     private void naechstePhase() {
@@ -54,6 +51,10 @@ public class Spiel {
 
     void zugBeenden() {
 
+    }
+
+    public void spielerRegistrieren(Spieler spieler){
+        this.spieler[0] = spieler;
     }
 
 }
