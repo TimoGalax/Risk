@@ -12,7 +12,7 @@ public class Spiel {
      *
      * -2 Registrierung der Spieler
      * -1 Setzen der verfügbaren Truppen
-     * 0
+     * 0  Truppen setzen
      */
     private int phase = -2;
     private int amZug = 0;
