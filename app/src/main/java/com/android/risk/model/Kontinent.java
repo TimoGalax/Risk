@@ -1,5 +1,6 @@
 package com.android.risk.model;
 
+import java.util.HashSet;
 import java.util.Objects;
 import java.util.TreeSet;
 
@@ -8,7 +9,7 @@ import java.util.TreeSet;
  * @author Thomas
  */
 class Kontinent {
-    private final TreeSet<Region> regionen = new TreeSet<>();
+    private final Region[] regionen;
     private final String kontinent;
     private final int truppenwert = 0; //TODO
     private boolean einheitlichBesetzt;
@@ -28,8 +29,7 @@ class Kontinent {
      * @return Der Besetzer der fraglichen Region.
      */
     Spieler getBesetzerRegion(int region) {
-        //TODO
-        return null;
+        return regionen.
     }
 
     @Override

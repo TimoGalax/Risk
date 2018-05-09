@@ -16,7 +16,7 @@ import java.util.TreeSet;
 class Region {
     private final Kontinent accordingKontinent;
     private final int regionenname;
-    private final TreeSet<Region> angrenzendeGebiete = new TreeSet<>();
+    private final Region[] angrenzendeGebiete;
     private int truppen;
     private Spieler besetzer;
 
@@ -74,7 +74,8 @@ class Region {
 
     @Override
     public int hashCode() {
-
         return Objects.hash(accordingKontinent, regionenname);
     }
+
+
 }
