@@ -13,13 +13,19 @@ public class Spieler {
     private int ungesetzteTruppen;
     private ArrayList<Integer> besetzteRegionen = new ArrayList<>();
     private boolean amZug = false;
+    private final String name;
 
-    Spieler(Farbe farbe) {
+    Spieler(Farbe farbe, String name) {
         this.farbe = farbe;
+        this.name=name;
     }
 
     void ungesetzteTruppenHinzufuegen(int anzahl) {
         ungesetzteTruppen = anzahl;
+    }
+
+    public Farbe getFarbe(){
+        return farbe;
     }
 
     public void truppenSetzen(int region, int anzahl) {
