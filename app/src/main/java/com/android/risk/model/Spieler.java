@@ -8,7 +8,7 @@ import java.util.ArrayList;
  */
 public class Spieler {
     private final Farbe farbe;
-    private final Spiel spiel;
+    private Spiel spiel;
     private int truppenzahl;
     private int ungesetzteTruppen;
     private ArrayList<Integer> besetzteRegionen = new ArrayList<>();
@@ -48,6 +48,10 @@ public class Spieler {
 
     public void zugBeenden() {
         spiel.zugBeenden();
+    }
+
+    public void setAmZug(boolean amZug) {
+        this.amZug = amZug;
     }
 
 }
