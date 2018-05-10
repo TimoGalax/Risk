@@ -127,19 +127,14 @@ class Kontinent {
         switch (kontinentBezeichner) {
             case "Nordamerika":
                 return 0;
-                break;
             case "Südamerika":
                 return 9;
-                break;
             case "Europa":
                 return 13;
-                break;
             case "Asien":
                 return 20;
-                break;
             case "Afrika":
                 return 32;
-                break;
             default:
                 return 38;
         }

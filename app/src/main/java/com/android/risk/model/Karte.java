@@ -6,6 +6,7 @@ package com.android.risk.model;
  */
 class Karte {
     private Kontinent kontinente[];
+    private boolean[] besucht = new boolean[42];
 
     Karte() {
         kontinente = new Kontinent[6]; //TODO Werte
@@ -31,8 +32,13 @@ class Karte {
      * @return Gibt an, ob eine Verbindung mit den oben genannten vorraussetzungen besteht.
      */
     boolean verbunden(int von, int nach) {
-        //TODO
+        besucht = new boolean[42];
+
         return false;
+    }
+
+    boolean[] getBesucht() {
+        return besucht;
     }
 
     Spieler getBesetzerRegion(int region) {
