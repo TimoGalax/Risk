@@ -25,7 +25,7 @@ class Karte {
     /**
      * Die Methode gibt an, ob zwei Regionen des selben Besetzers verbunden sind.
      * Als Verbunden gelten zwei Regionen, wenn es einen Pfad (def. Graphen) gibt,
-     * der nur über Regeionen führt,
+     * der nur über Regeionen führt, die von einem Spieler besetzt sind.
      *
      * @param von  Die Regionenkennziffer der ersten Region.
      * @param nach Die Regionenkennziffer der zweiten Region.
@@ -41,24 +41,28 @@ class Karte {
         return besucht;
     }
 
-    Spieler getBesetzerRegion(int region) {
+    Region getRegion(int region) {
         if (region<0||region>41) {
             //TODO Exception
         }
 
         if (region<9) {
-            return kontinente[0].getBesetzerRegion(region);
+            return kontinente[0].getRegion(region);
         } else if (region<13) {
-            return kontinente[1].getBesetzerRegion(region);
+            return kontinente[1].getRegion(region);
         } else if (region<20) {
-            return kontinente[2].getBesetzerRegion(region);
+            return kontinente[2].getRegion(region);
         } else if (region<32) {
-            return kontinente[3].getBesetzerRegion(region);
+            return kontinente[3].getRegion(region);
         } else if (region<38) {
-            return kontinente[4].getBesetzerRegion(region);
+            return kontinente[4].getRegion(region);
         } else {
-            return kontinente[5].getBesetzerRegion(region);
+            return kontinente[5].getRegion(region);
         }
+    }
+
+    Spieler getBesetzerRegion(int region) {
+        return getRegion(region).getBesetzer();
     }
 
 }

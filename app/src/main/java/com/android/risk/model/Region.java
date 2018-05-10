@@ -82,64 +82,342 @@ class Region {
         switch (regionenname) {
             case 0:
                 angrenzendeGebiete = new Region[] {
-
+                        karte.getRegion(1),
+                        karte.getRegion(3),
+                        karte.getRegion(23)
                 };
                 break;
             case 1:
                 angrenzendeGebiete = new Region[] {
-
+                        karte.getRegion(0),
+                        karte.getRegion(2),
+                        karte.getRegion(3),
+                        karte.getRegion(4)
+                        //TODO Verbindung nach Quebec?
                 };
                 break;
-            case 2: angrenzendeGebiete = new Region[] {}; break;
-            case 3: angrenzendeGebiete = new Region[] {}; break;
-            case 4: angrenzendeGebiete = new Region[] {}; break;
-            case 5: angrenzendeGebiete = new Region[] {}; break;
-            case 6: angrenzendeGebiete = new Region[] {}; break;
-            case 7: angrenzendeGebiete = new Region[] {}; break;
-            case 8: angrenzendeGebiete = new Region[] {}; break;
-            case 9: angrenzendeGebiete = new Region[] {}; break;
-            case 10: angrenzendeGebiete = new Region[] {}; break;
-            case 11: angrenzendeGebiete = new Region[] {}; break;
-            case 12: angrenzendeGebiete = new Region[] {}; break;
-            case 13: angrenzendeGebiete = new Region[] {}; break;
-            case 14: angrenzendeGebiete = new Region[] {}; break;
-            case 15: angrenzendeGebiete = new Region[] {}; break;
-            case 16: angrenzendeGebiete = new Region[] {}; break;
-            case 17: angrenzendeGebiete = new Region[] {}; break;
-            case 18: angrenzendeGebiete = new Region[] {}; break;
-            case 19: angrenzendeGebiete = new Region[] {}; break;
-            case 20: angrenzendeGebiete = new Region[] {}; break;
-            case 21: angrenzendeGebiete = new Region[] {}; break;
-            case 22: angrenzendeGebiete = new Region[] {}; break;
-            case 23: angrenzendeGebiete = new Region[] {}; break;
-            case 24: angrenzendeGebiete = new Region[] {}; break;
-            case 25: angrenzendeGebiete = new Region[] {}; break;
-            case 26: angrenzendeGebiete = new Region[] {}; break;
-            case 27: angrenzendeGebiete = new Region[] {}; break;
-            case 28: angrenzendeGebiete = new Region[] {}; break;
-            case 29: angrenzendeGebiete = new Region[] {}; break;
-            case 30: angrenzendeGebiete = new Region[] {}; break;
-            case 31: angrenzendeGebiete = new Region[] {}; break;
-            case 32: angrenzendeGebiete = new Region[] {}; break;
-            case 33: angrenzendeGebiete = new Region[] {}; break;
-            case 34: angrenzendeGebiete = new Region[] {}; break;
-            case 35: angrenzendeGebiete = new Region[] {}; break;
-            case 36: angrenzendeGebiete = new Region[] {}; break;
-            case 37: angrenzendeGebiete = new Region[] {}; break;
-            case 38: angrenzendeGebiete = new Region[] {}; break;
-            case 39: angrenzendeGebiete = new Region[] {}; break;
-            case 40: angrenzendeGebiete = new Region[] {}; break;
-            default: angrenzendeGebiete = new Region[] {};
+            case 2:
+                angrenzendeGebiete = new Region[] {
+                        //TODO Verbindungen?
+                        karte.getRegion(1),
+                        karte.getRegion(5),
+                        karte.getRegion(13)
+                };
+                break;
+            case 3:
+                angrenzendeGebiete = new Region[] {
+                        karte.getRegion(0),
+                        karte.getRegion(1),
+                        karte.getRegion(4),
+                        karte.getRegion(6)
+                };
+                break;
+            case 4:
+                angrenzendeGebiete = new Region[] {
+                        //TODO Verbindungen?
+                        karte.getRegion(1),
+                        karte.getRegion(2),
+                        karte.getRegion(3),
+                        karte.getRegion(5),
+                        karte.getRegion(6),
+                        karte.getRegion(7)
+                };
+                break;
+            case 5:
+                angrenzendeGebiete = new Region[] {
+                        //TODO Verbindungen?
+                        karte.getRegion(2),
+                        karte.getRegion(4),
+                        karte.getRegion(7)
+                };
+                break;
+            case 6:
+                angrenzendeGebiete = new Region[] {
+                        karte.getRegion(3),
+                        karte.getRegion(4),
+                        karte.getRegion(7),
+                        karte.getRegion(8)
+                };
+                break;
+            case 7:
+                angrenzendeGebiete = new Region[] {
+                        karte.getRegion(4),
+                        karte.getRegion(5),
+                        karte.getRegion(6),
+                        karte.getRegion(8)
+                };
+                break;
+            case 8:
+                angrenzendeGebiete = new Region[] {
+                        karte.getRegion(6),
+                        karte.getRegion(7),
+                        karte.getRegion(9)
+                };
+                break;
+            case 9:
+                angrenzendeGebiete = new Region[] {
+                        karte.getRegion(8),
+                        karte.getRegion(10),
+                        karte.getRegion(11)
+                };
+                break;
+            case 10:
+                angrenzendeGebiete = new Region[] {
+                        karte.getRegion(9),
+                        karte.getRegion(11),
+                        karte.getRegion(12),
+                        karte.getRegion(32)
+                };
+                break;
+            case 11:
+                angrenzendeGebiete = new Region[] {
+                        karte.getRegion(9),
+                        karte.getRegion(10),
+                        karte.getRegion(12)
+                };
+                break;
+            case 12:
+                angrenzendeGebiete = new Region[] {
+                        karte.getRegion(10),
+                        karte.getRegion(11)
+                };
+                break;
+            case 13:
+                angrenzendeGebiete = new Region[] {
+                        karte.getRegion(2),
+                        karte.getRegion(14)
+                };
+                break;
+            case 14:
+                angrenzendeGebiete = new Region[] {
+                        karte.getRegion(13),
+                        karte.getRegion(17),
+                        karte.getRegion(19)
+                };
+                break;
+            case 15:
+                angrenzendeGebiete = new Region[] {
+                        //TODO Verbindungen?
+                        karte.getRegion(16),
+                        karte.getRegion(17)
+                };
+                break;
+            case 16:
+                angrenzendeGebiete = new Region[] {
+                        karte.getRegion(15),
+                        karte.getRegion(17),
+                        karte.getRegion(18),
+                        karte.getRegion(20),
+                        karte.getRegion(28),
+                        karte.getRegion(29)
+                };
+                break;
+            case 17:
+                angrenzendeGebiete = new Region[] {
+                        karte.getRegion(14),
+                        karte.getRegion(15),
+                        karte.getRegion(16),
+                        karte.getRegion(18),
+                        karte.getRegion(19)
+                };
+                break;
+            case 18:
+                angrenzendeGebiete = new Region[] {
+                        karte.getRegion(16),
+                        karte.getRegion(17),
+                        karte.getRegion(19),
+                        karte.getRegion(29),
+                        karte.getRegion(32),
+                        karte.getRegion(33)
+                };
+                break;
+            case 19:
+                angrenzendeGebiete = new Region[] {
+                        karte.getRegion(14),
+                        karte.getRegion(17),
+                        karte.getRegion(18),
+                        karte.getRegion(32)
+                };
+                break;
+            case 20:
+                angrenzendeGebiete = new Region[] {
+                        karte.getRegion(16),
+                        karte.getRegion(21),
+                        karte.getRegion(27),
+                        karte.getRegion(28)
+                };
+                break;
+            case 21:
+                angrenzendeGebiete = new Region[] {
+                        karte.getRegion(20),
+                        karte.getRegion(22),
+                        karte.getRegion(24),
+                        karte.getRegion(25),
+                        karte.getRegion(27)
+                };
+                break;
+            case 22:
+                angrenzendeGebiete = new Region[] {
+                        karte.getRegion(21),
+                        karte.getRegion(23),
+                        karte.getRegion(24)
+                };
+                break;
+            case 23:
+                angrenzendeGebiete = new Region[] {
+                        karte.getRegion(0),
+                        karte.getRegion(22),
+                        karte.getRegion(24),
+                        karte.getRegion(25),
+                        karte.getRegion(26)
+                };
+                break;
+            case 24:
+                angrenzendeGebiete = new Region[] {
+                        karte.getRegion(21),
+                        karte.getRegion(22),
+                        karte.getRegion(23),
+                        karte.getRegion(25)
+                };
+                break;
+            case 25:
+                angrenzendeGebiete = new Region[] {
+                        karte.getRegion(21),
+                        karte.getRegion(23),
+                        karte.getRegion(24),
+                        karte.getRegion(26),
+                        karte.getRegion(27)
+                };
+                break;
+            case 26:
+                angrenzendeGebiete = new Region[] {
+                        karte.getRegion(23),
+                        karte.getRegion(25)
+                };
+                break;
+            case 27:
+                angrenzendeGebiete = new Region[] {
+                        karte.getRegion(20),
+                        karte.getRegion(21),
+                        karte.getRegion(25),
+                        karte.getRegion(28),
+                        karte.getRegion(30),
+                        karte.getRegion(31)
+                };
+                break;
+            case 28:
+                angrenzendeGebiete = new Region[] {
+                        karte.getRegion(16),
+                        karte.getRegion(20),
+                        karte.getRegion(27),
+                        karte.getRegion(29),
+                        karte.getRegion(30)
+                };
+                break;
+            case 29:
+                angrenzendeGebiete = new Region[] {
+                        karte.getRegion(16),
+                        karte.getRegion(18),
+                        karte.getRegion(28),
+                        karte.getRegion(30),
+                        karte.getRegion(33),
+                        karte.getRegion(34)
+                };
+                break;
+            case 30:
+                angrenzendeGebiete = new Region[] {
+                        karte.getRegion(27),
+                        karte.getRegion(28),
+                        karte.getRegion(29),
+                        karte.getRegion(31)
+                };
+                break;
+            case 31:
+                angrenzendeGebiete = new Region[] {
+                        karte.getRegion(27),
+                        karte.getRegion(30),
+                        karte.getRegion(38)
+                };
+                break;
+            case 32:
+                angrenzendeGebiete = new Region[] {
+                        karte.getRegion(10),
+                        karte.getRegion(18),
+                        karte.getRegion(19),
+                        karte.getRegion(33),
+                        karte.getRegion(34),
+                        karte.getRegion(35)
+                };
+                break;
+            case 33:
+                angrenzendeGebiete = new Region[] {
+                        karte.getRegion(18),
+                        karte.getRegion(29),
+                        karte.getRegion(32),
+                        karte.getRegion(34)
+                };
+                break;
+            case 34:
+                angrenzendeGebiete = new Region[] {
+                        karte.getRegion(29),
+                        karte.getRegion(32),
+                        karte.getRegion(33),
+                        karte.getRegion(35),
+                        karte.getRegion(36),
+                        karte.getRegion(37)
+                };
+                break;
+            case 35:
+                angrenzendeGebiete = new Region[] {
+                        karte.getRegion(32),
+                        karte.getRegion(34),
+                        karte.getRegion(36)
+                };
+                break;
+            case 36:
+                angrenzendeGebiete = new Region[] {
+                        karte.getRegion(34),
+                        karte.getRegion(35),
+                        karte.getRegion(37)
+                };
+                break;
+            case 37:
+                angrenzendeGebiete = new Region[] {
+                        karte.getRegion(34),
+                        karte.getRegion(36)
+                };
+                break;
+            case 38:
+                angrenzendeGebiete = new Region[] {
+                        karte.getRegion(31),
+                        karte.getRegion(39),
+                        karte.getRegion(40)
+                };
+                break;
+            case 39:
+                angrenzendeGebiete = new Region[] {
+                        karte.getRegion(38),
+                        karte.getRegion(40),
+                        karte.getRegion(41)
+                };
+                break;
+            case 40:
+                angrenzendeGebiete = new Region[] {
+                        karte.getRegion(38),
+                        karte.getRegion(39),
+                        karte.getRegion(41)
+                };
+                break;
+            default: //41
+                angrenzendeGebiete = new Region[] {
+                        karte.getRegion(39),
+                        karte.getRegion(40)
+                };
         }
     }
 
-    /**
-     * Die Methode ist für die 3. Phase (Truppenbewegung) von Bedeutung.
-     * Mit ihr wird die Menge der abzuziehenden Truppen festgelegt.
-     *
-     * @param anzahl Die Anzahl der Truppen
-     */
-    void truppenBewegen(int anzahl) {
+    boolean verbunden(int ziel) {
+        if (regionenname==ziel) return true;
 
     }
 
