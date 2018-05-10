@@ -33,8 +33,9 @@ class Karte {
      */
     boolean verbunden(int von, int nach) {
         besucht = new boolean[42];
-
-        return false;
+        if (von == nach) return true;
+        if (!getBesetzerRegion(von).equals(getBesetzerRegion(nach))) return false;
+        return getRegion(von).verbunden(nach);
     }
 
     boolean[] getBesucht() {

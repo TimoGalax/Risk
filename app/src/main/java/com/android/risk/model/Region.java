@@ -69,7 +69,7 @@ class Region {
      * Regionenbezeichner
      */
     private final int regionenname;
-    private int truppen;
+    private int truppen = 0;
     private Spieler besetzer;
 
     Region(Kontinent kontinent, int regionenname) {
@@ -418,7 +418,15 @@ class Region {
 
     boolean verbunden(int ziel) {
         if (regionenname==ziel) return true;
+        boolean [] besucht = accordingKontinent.getKarte().getBesucht();
+        besucht[regionenname] = true;
 
+        for (Region akktuell : angrenzendeGebiete) {
+            if (akktuell.getBesetzer().equals(besetzer) && !besucht[akktuell.regionenname]) {
+                if (akktuell.verbunden(ziel)) return true;
+            }
+        }
+        return false;
     }
 
     /**
