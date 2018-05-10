@@ -9,12 +9,12 @@ class Karte {
 
     Karte() {
         kontinente = new Kontinent[6]; //TODO Werte
-        kontinente[0] = new Kontinent("Nordamerika");
-        kontinente[1] = new Kontinent("Südamerika");
-        kontinente[2] = new Kontinent("Europa");
-        kontinente[3] = new Kontinent("Afrika");
-        kontinente[4] = new Kontinent("Asien");
-        kontinente[5] = new Kontinent("Australien");
+        kontinente[0] = new Kontinent(this,"Nordamerika");
+        kontinente[1] = new Kontinent(this,"Südamerika");
+        kontinente[2] = new Kontinent(this,"Europa");
+        kontinente[3] = new Kontinent(this,"Afrika");
+        kontinente[4] = new Kontinent(this,"Asien");
+        kontinente[5] = new Kontinent(this,"Australien");
     }
 
     /**
