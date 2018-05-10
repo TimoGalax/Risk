@@ -9,7 +9,7 @@ class Karte {
     private boolean[] besucht = new boolean[42];
 
     Karte() {
-        kontinente = new Kontinent[6]; //TODO Werte
+        kontinente = new Kontinent[6];
         kontinente[0] = new Kontinent(this,"Nordamerika");
         kontinente[1] = new Kontinent(this,"Südamerika");
         kontinente[2] = new Kontinent(this,"Europa");
