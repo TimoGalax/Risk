@@ -25,10 +25,12 @@ class Region {
      * 6  Western United States
      * 7  Eastern United States
      * 8  Zentralamerika
+     * --
      * 9  Venezuela
      * 10 Brazilien
      * 11 Peru
      * 12 Argentinien
+     * --
      * 13 Island
      * 14 Großbritannien
      * 15 Skandinavien
@@ -36,6 +38,7 @@ class Region {
      * 17 Nordeuropa
      * 18 Südeuropa
      * 19 Westeuropa
+     * --
      * 20 Ural
      * 21 Sibirien
      * 22 "Yakursk"
@@ -48,12 +51,14 @@ class Region {
      * 29 "Middle East"
      * 30 Indien
      * 31 Siam
+     * --
      * 32 Nordafrika
      * 33 Ägypten
      * 34 Ostafrika
      * 35 Kongo
      * 36 Südafrika
      * 37 Madagaskar
+     * --
      * 38 Indonesien
      * 39 Neuginea
      * 40 Westaustralien
@@ -73,53 +78,58 @@ class Region {
 
     }
 
-    void angrenzendeGebieteInitialisieren() {
-
-        Karte karte = accordingKontinent.getKarte();
-
+    void angrenzendeGebieteInitialisieren(Karte karte) {
         switch (regionenname) {
-            case 0: angrenzendeGebiete = {} break;
-            case 1: break;
-            case 2: break;
-            case 3: break;
-            case 4: break;
-            case 5: break;
-            case 6: break;
-            case 7: break;
-            case 8: break;
-            case 9: break;
-            case 10: break;
-            case 11: break;
-            case 12: break;
-            case 13: break;
-            case 14: break;
-            case 15: break;
-            case 16: break;
-            case 17: break;
-            case 18: break;
-            case 19: break;
-            case 20: break;
-            case 21: break;
-            case 22: break;
-            case 23: break;
-            case 24: break;
-            case 25: break;
-            case 26: break;
-            case 27: break;
-            case 28: break;
-            case 29: break;
-            case 30: break;
-            case 31: break;
-            case 32: break;
-            case 33: break;
-            case 34: break;
-            case 35: break;
-            case 36: break;
-            case 37: break;
-            case 38: break;
-            case 39: break;
-            case 40: break;
-            case 41: break;
+            case 0:
+                angrenzendeGebiete = new Region[] {
+
+                };
+                break;
+            case 1:
+                angrenzendeGebiete = new Region[] {
+
+                };
+                break;
+            case 2: angrenzendeGebiete = new Region[] {}; break;
+            case 3: angrenzendeGebiete = new Region[] {}; break;
+            case 4: angrenzendeGebiete = new Region[] {}; break;
+            case 5: angrenzendeGebiete = new Region[] {}; break;
+            case 6: angrenzendeGebiete = new Region[] {}; break;
+            case 7: angrenzendeGebiete = new Region[] {}; break;
+            case 8: angrenzendeGebiete = new Region[] {}; break;
+            case 9: angrenzendeGebiete = new Region[] {}; break;
+            case 10: angrenzendeGebiete = new Region[] {}; break;
+            case 11: angrenzendeGebiete = new Region[] {}; break;
+            case 12: angrenzendeGebiete = new Region[] {}; break;
+            case 13: angrenzendeGebiete = new Region[] {}; break;
+            case 14: angrenzendeGebiete = new Region[] {}; break;
+            case 15: angrenzendeGebiete = new Region[] {}; break;
+            case 16: angrenzendeGebiete = new Region[] {}; break;
+            case 17: angrenzendeGebiete = new Region[] {}; break;
+            case 18: angrenzendeGebiete = new Region[] {}; break;
+            case 19: angrenzendeGebiete = new Region[] {}; break;
+            case 20: angrenzendeGebiete = new Region[] {}; break;
+            case 21: angrenzendeGebiete = new Region[] {}; break;
+            case 22: angrenzendeGebiete = new Region[] {}; break;
+            case 23: angrenzendeGebiete = new Region[] {}; break;
+            case 24: angrenzendeGebiete = new Region[] {}; break;
+            case 25: angrenzendeGebiete = new Region[] {}; break;
+            case 26: angrenzendeGebiete = new Region[] {}; break;
+            case 27: angrenzendeGebiete = new Region[] {}; break;
+            case 28: angrenzendeGebiete = new Region[] {}; break;
+            case 29: angrenzendeGebiete = new Region[] {}; break;
+            case 30: angrenzendeGebiete = new Region[] {}; break;
+            case 31: angrenzendeGebiete = new Region[] {}; break;
+            case 32: angrenzendeGebiete = new Region[] {}; break;
+            case 33: angrenzendeGebiete = new Region[] {}; break;
+            case 34: angrenzendeGebiete = new Region[] {}; break;
+            case 35: angrenzendeGebiete = new Region[] {}; break;
+            case 36: angrenzendeGebiete = new Region[] {}; break;
+            case 37: angrenzendeGebiete = new Region[] {}; break;
+            case 38: angrenzendeGebiete = new Region[] {}; break;
+            case 39: angrenzendeGebiete = new Region[] {}; break;
+            case 40: angrenzendeGebiete = new Region[] {}; break;
+            default: angrenzendeGebiete = new Region[] {};
         }
     }
 
@@ -143,9 +153,8 @@ class Region {
         truppen+=anzahl;
     }
 
-
-    void angreifen(int anzahl) {
-
+    void truppenEntfernen(int anzahl) {
+        truppen-=anzahl;
     }
 
     /**
@@ -155,6 +164,11 @@ class Region {
      */
     Spieler getBesetzer() {
         return besetzer;
+    }
+
+    void setBesetzer(Spieler nBesetzer) {
+        besetzer = nBesetzer;
+        accordingKontinent.istEinheitlichBesetzt();
     }
 
 

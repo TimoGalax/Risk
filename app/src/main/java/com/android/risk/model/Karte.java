@@ -12,9 +12,13 @@ class Karte {
         kontinente[0] = new Kontinent(this,"Nordamerika");
         kontinente[1] = new Kontinent(this,"Südamerika");
         kontinente[2] = new Kontinent(this,"Europa");
-        kontinente[3] = new Kontinent(this,"Afrika");
-        kontinente[4] = new Kontinent(this,"Asien");
+        kontinente[3] = new Kontinent(this,"Asien");
+        kontinente[4] = new Kontinent(this,"Afrika");
         kontinente[5] = new Kontinent(this,"Australien");
+
+        for (Kontinent kontinent : kontinente) {
+            kontinent.angrenzendeGebieteInitialisieren();
+        }
     }
 
     /**
@@ -36,16 +40,19 @@ class Karte {
             //TODO Exception
         }
 
-        if (region<18) {
+        if (region<9) {
             return kontinente[0].getBesetzerRegion(region);
-        } else if (region<30) {
+        } else if (region<13) {
             return kontinente[1].getBesetzerRegion(region);
-        } else if (region<36) {
+        } else if (region<20) {
             return kontinente[2].getBesetzerRegion(region);
+        } else if (region<32) {
+            return kontinente[3].getBesetzerRegion(region);
+        } else if (region<38) {
+            return kontinente[4].getBesetzerRegion(region);
+        } else {
+            return kontinente[5].getBesetzerRegion(region);
         }
-
-        //TODO Werte konkretisieren; Methode ausbauen
-        return null;
     }
 
 }
