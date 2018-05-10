@@ -64,7 +64,7 @@ class Region {
      * 40 Westaustralien
      * 41 Ostaustralien
      */
-    private int[] angrenzendeGebiete;
+    private Region[] angrenzendeGebiete;
     /**
      * Regionenbezeichner
      */
