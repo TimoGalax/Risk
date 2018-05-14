@@ -93,13 +93,12 @@ class Region {
                         karte.getRegion(2),
                         karte.getRegion(3),
                         karte.getRegion(4)
-                        //TODO Verbindung nach Quebec?
                 };
                 break;
             case 2:
                 angrenzendeGebiete = new Region[] {
-                        //TODO Verbindungen?
                         karte.getRegion(1),
+                        karte.getRegion(4),
                         karte.getRegion(5),
                         karte.getRegion(13)
                 };
@@ -114,7 +113,6 @@ class Region {
                 break;
             case 4:
                 angrenzendeGebiete = new Region[] {
-                        //TODO Verbindungen?
                         karte.getRegion(1),
                         karte.getRegion(2),
                         karte.getRegion(3),
@@ -125,7 +123,6 @@ class Region {
                 break;
             case 5:
                 angrenzendeGebiete = new Region[] {
-                        //TODO Verbindungen?
                         karte.getRegion(2),
                         karte.getRegion(4),
                         karte.getRegion(7)
