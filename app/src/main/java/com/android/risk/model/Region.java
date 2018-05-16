@@ -93,13 +93,12 @@ class Region {
                         karte.getRegion(2),
                         karte.getRegion(3),
                         karte.getRegion(4)
-                        //TODO Verbindung nach Quebec?
                 };
                 break;
             case 2:
                 angrenzendeGebiete = new Region[] {
-                        //TODO Verbindungen?
                         karte.getRegion(1),
+                        karte.getRegion(4),
                         karte.getRegion(5),
                         karte.getRegion(13)
                 };
@@ -114,7 +113,6 @@ class Region {
                 break;
             case 4:
                 angrenzendeGebiete = new Region[] {
-                        //TODO Verbindungen?
                         karte.getRegion(1),
                         karte.getRegion(2),
                         karte.getRegion(3),
@@ -125,7 +123,6 @@ class Region {
                 break;
             case 5:
                 angrenzendeGebiete = new Region[] {
-                        //TODO Verbindungen?
                         karte.getRegion(2),
                         karte.getRegion(4),
                         karte.getRegion(7)
@@ -185,19 +182,22 @@ class Region {
             case 13:
                 angrenzendeGebiete = new Region[] {
                         karte.getRegion(2),
-                        karte.getRegion(14)
+                        karte.getRegion(14),
+                        karte.getRegion(15)
                 };
                 break;
             case 14:
                 angrenzendeGebiete = new Region[] {
                         karte.getRegion(13),
+                        karte.getRegion(15),
                         karte.getRegion(17),
                         karte.getRegion(19)
                 };
                 break;
             case 15:
                 angrenzendeGebiete = new Region[] {
-                        //TODO Verbindungen?
+                        karte.getRegion(13),
+                        karte.getRegion(14),
                         karte.getRegion(16),
                         karte.getRegion(17)
                 };
