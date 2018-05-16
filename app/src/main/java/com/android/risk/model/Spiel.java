@@ -44,8 +44,12 @@ public class Spiel {
         }
     }
 
+    /**
+     * Berechnet die zu vergebende Anzahl an Truppen und gibt sie an den Spieler weiter.
+     */
     private void truppenHinzufuegen() {
-
+        
+        Spieler.umgesetzteTruppenHinzufügen(truppenanzahl);
     }
 
     void truppenSetzen(int region, int anzahl) {
