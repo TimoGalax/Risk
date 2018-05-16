@@ -14,7 +14,7 @@ public class Spieler {
     private ArrayList<Integer> besetzteRegionen = new ArrayList<>();
     private boolean amZug = false;
 
-    Spieler(Farbe farbe) {
+    public Spieler(Farbe farbe) {
         this.farbe = farbe;
     }
 

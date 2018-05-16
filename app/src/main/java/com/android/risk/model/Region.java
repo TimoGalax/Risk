@@ -75,7 +75,7 @@ class Region {
     Region(Kontinent kontinent, int regionenname) {
         this.accordingKontinent = kontinent;
         this.regionenname = regionenname;
-//7djfhwoe
+
     }
 
     void angrenzendeGebieteInitialisieren(Karte karte) {

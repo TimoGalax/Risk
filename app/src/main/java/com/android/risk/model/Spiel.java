@@ -2,7 +2,7 @@ package com.android.risk.model;
 
 /**
  *
- * @author Thomas
+ * @author Timo,Thomas
  */
 public class Spiel {
     private Karte karte;
@@ -36,10 +36,10 @@ public class Spiel {
      * Wird aufgerufen, wenn der Übergang in die nächste Phase vorgenommen wird.
      */
     private void naechstePhase() {
-        phase = (phase+1)%3; //TODO unfertig
+        phase = (phase+1)%3; //immer ein Kreislauf: 0,1,2,0,1,2,......
         if (phase == 0) {
             spieler[amZug].setAmZug(false);
-            amZug = (amZug+1)%spieler.length;
+            amZug = (amZug+1)%spieler.length; //ebenfalls ein Kreislauf: Wenn alle Spieler an der Reihe waren: wieder der erste
             spieler[amZug].setAmZug(true);
         }
     }
