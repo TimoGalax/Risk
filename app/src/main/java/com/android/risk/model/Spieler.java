@@ -22,9 +22,9 @@ public class Spieler {
 
     /**
      * Vor der 1.Phase: Der Spieler bekommt je nach besetzten Gebieten eine Anzahl von Truppen
-     * @param anzahl: Anzahl der Truppen
+     * @param anzahl : Anzahl der Truppen
      */
-    void ungesetzteTruppenHinzufuegen(int anzahl) {
+    public void ungesetzteTruppenHinzufuegen(int anzahl) {
         ungesetzteTruppen = anzahl;
     }
 
