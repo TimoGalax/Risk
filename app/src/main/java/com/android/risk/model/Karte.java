@@ -40,10 +40,22 @@ class Karte {
         return getRegion(von).verbunden(nach);
     }
 
+    /**
+     * Die Methode gibt das Attribut "besucht" zurück.
+     * Das Attribut wird in der Methode "verbunden" der Klasse "Region" beim Graphendurchlauf
+     * verwendet.
+     *
+     * @return Das Attribut "besucht"
+     */
     boolean[] getBesucht() {
         return besucht;
     }
 
+    /**
+     *
+     * @param region
+     * @return
+     */
     Region getRegion(int region) {
         if (region<9) {
             return kontinente[0].getRegion(region);
@@ -60,10 +72,20 @@ class Karte {
         }
     }
 
+    /**
+     *
+     * @param region
+     * @return
+     */
     Spieler getBesetzerRegion(int region) {
         return getRegion(region).getBesetzer();
     }
 
+    /**
+     *
+     * @param spieler
+     * @return
+     */
     ArrayList<Kontinent> getBesetzungen(Spieler spieler) {
         ArrayList<Kontinent> ausg = new ArrayList<>(4);
         for(Kontinent kontinent : kontinente) {

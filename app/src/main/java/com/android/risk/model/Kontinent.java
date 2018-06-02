@@ -1,7 +1,5 @@
 package com.android.risk.model;
 
-//import java.util.Objects;
-
 /**
  *
  * @author Thomas
@@ -93,12 +91,21 @@ class Kontinent {
         }
     }
 
+    /**
+     * Die Methode ruft von allen Regionen Objekten die Methode zur initialisierung
+     * angrenzender Gebiete auf.
+     */
     void angrenzendeGebieteInitialisieren() {
         for (Region region : regionen) {
             region.angrenzendeGebieteInitialisieren(karte);
         }
     }
 
+    /**
+     * Die Methode ermittelt ob der Kontinent einheitlich, d.h. nur von einem Spieler, besetzt ist.
+     *
+     * @return Der ermittelte "Wert" wird zurückgegeben.
+     */
     boolean istEinheitlichBesetzt() {
         Spieler besetzer = regionen[0].getBesetzer();
         boolean einheitlich = true;
@@ -114,14 +121,33 @@ class Kontinent {
         return einheitlich;
     }
 
+    /**
+     * Rückgabe des in der Methode "istEinheitlichBesetzt" ermittelten Wertes.
+     * Das Attribut gibt an, ob der Kontinent einheitlich besetzt ist.
+     *
+     * @return Das Attribut "einheitlichBesetzt"
+     */
     boolean getEinheitlichBesetzt() {
         return einheitlichBesetzt;
     }
 
+    /**
+     * Das Attribut gibt an, wer den Kontinent vollständig besetzt.
+     * Falls nicht nur eine Person Regionen auf diesem Kontinent besetzt hat ist der Wert "null".
+     *
+     * @return Das Attribut "einheitlicherBesetzer"
+     */
     Spieler getBesetzer() {
         return einheitlicherBesetzer;
     }
 
+    /**
+     * Das Attribut ist eine vom Kontinent abhängige Konstante. Sie gibt an, wie viele
+     * zusätzliche Einheiten man am Anfang einer Phase bekommt, wenn man der alleinige Besetzer
+     * des Kontinents ist.
+     *
+     * @return Das Attribut "Truppenwert".
+     */
     int getTruppenwert() {
         return truppenwert;
     }
@@ -136,6 +162,12 @@ class Kontinent {
         return getRegion(region).getBesetzer();
     }
 
+    /**
+     * Die Methode gibt einen Wert zurück, der verwendet wird, um von der allgemeinen
+     * Regionenkennziffer auf die Stelle im Array (Das Attribut "regionen") schließen zu können.
+     *
+     * @return
+     */
     private int regionenOffset() {
         switch (kontinentBezeichner) {
             case "Nordamerika":
@@ -153,10 +185,22 @@ class Kontinent {
         }
     }
 
+    /**
+     * Gibt die gesuchte Region zurück. Die Methode "regionenOffset" wird hier verwendet,
+     * um von der allgemeinen Regionenkennziffer auf die Stelle im Array zu schließen.
+     *
+     * @param region Die Regionenkennziffer der gesuchten Region.
+     * @return Die gesuchte Region.
+     */
     Region getRegion(int region) {
         return regionen[region-regionenOffset()];
     }
 
+    /**
+     * Gibt das Attribut Karte zurück.
+     *
+     * @return Das Attribut Karte.
+     */
     Karte getKarte() {
         return karte;
     }

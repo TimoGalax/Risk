@@ -3,12 +3,9 @@ package com.android.risk.model;
 import java.util.Objects;
 
 /**
- * Die Klasse "Region" ist der kleinste Bestandteil der "Welt" des Risiko spiels.
+ * Die Klasse "Region" ist der kleinste Bestandteil der "Welt" des Spiels.
  * Sie enthält ihren Kontinent, die auf ihr stationierten Truppen, der Besetzer der Region,
  * eine Regionen kennziffer und die Angrenzenden Gebiete.
- *
- * Noch ist die Idee, dass diese Klasse keine überprüfung auf Validität ausführen muss, da
- * diese von einer Übergeordneten Klasse (Kontinent, Karte, Spiel) übernommen wird.
  *
  * @author Thomas
  */
@@ -78,6 +75,13 @@ class Region {
 
     }
 
+    /**
+     * Initialisierung der angrenzenden Gebiete.
+     * Die Methode wird nach der Erzeugung der Kontinente und damit aller Regionen
+     * im Konstruktor der "Karte" aufgerufen.
+     *
+     * @param karte Das Kartenobjekt in welchem diese Region enthalten ist.
+     */
     void angrenzendeGebieteInitialisieren(Karte karte) {
         switch (regionenname) {
             case 0:
@@ -416,6 +420,15 @@ class Region {
         }
     }
 
+    /**
+     * Überprüft ob zwischen dieser Region und der Region als Parameter eine Verbindung besteht.
+     * Verbunden gelten zwei Regionen, wenn es einen Pfad, nur über Regionen des selben Besatzers,
+     * existiert.
+     *
+     * @param ziel Die Regionenkennziffer der Region von der es zu überprüfen gilt, ob eine
+     *             Verbindung besteht.
+     * @return Existens eines Pfades.
+     */
     boolean verbunden(int ziel) {
         if (regionenname==ziel) return true;
         boolean [] besucht = accordingKontinent.getKarte().getBesucht();
@@ -439,6 +452,11 @@ class Region {
         truppen+=anzahl;
     }
 
+    /**
+     * Die Methode ist sowohl für die 2. Phase , als auch für die 3. Phase von Bedeutung.
+     *
+     * @param anzahl Die Anzahl der zu entfernenden Truppen.
+     */
     void truppenEntfernen(int anzahl) {
         truppen-=anzahl;
     }
@@ -452,6 +470,11 @@ class Region {
         return besetzer;
     }
 
+    /**
+     * Die Methode ist am Anfang des Spiels und auch danach bei Eroberungen wichtig.
+     *
+     * @param nBesetzer Der neue Besetzer der Region
+     */
     void setBesetzer(Spieler nBesetzer) {
         besetzer = nBesetzer;
         accordingKontinent.istEinheitlichBesetzt();
