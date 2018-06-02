@@ -1,5 +1,7 @@
 package com.android.risk.model;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Thomas
@@ -43,10 +45,6 @@ class Karte {
     }
 
     Region getRegion(int region) {
-        if (region<0||region>41) {
-            //TODO Exception
-        }
-
         if (region<9) {
             return kontinente[0].getRegion(region);
         } else if (region<13) {
@@ -64,6 +62,15 @@ class Karte {
 
     Spieler getBesetzerRegion(int region) {
         return getRegion(region).getBesetzer();
+    }
+
+    ArrayList<Kontinent> getBesetzungen(Spieler spieler) {
+        ArrayList<Kontinent> ausg = new ArrayList<>(4);
+        for(Kontinent kontinent : kontinente) {
+            if (!kontinent.getEinheitlichBesetzt() || kontinent.getBesetzer()!=spieler) continue;
+            ausg.add(kontinent);
+        }
+        return ausg;
     }
 
 }

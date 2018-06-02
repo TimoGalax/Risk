@@ -106,11 +106,24 @@ class Kontinent {
             einheitlich = regionen[i].getBesetzer().equals(besetzer) && einheitlich;
         }
         einheitlichBesetzt = einheitlich;
+        if (einheitlich) {
+            einheitlicherBesetzer = besetzer;
+        } else {
+            einheitlicherBesetzer = null;
+        }
         return einheitlich;
     }
 
     boolean getEinheitlichBesetzt() {
         return einheitlichBesetzt;
+    }
+
+    Spieler getBesetzer() {
+        return einheitlicherBesetzer;
+    }
+
+    int getTruppenwert() {
+        return truppenwert;
     }
 
     /**
